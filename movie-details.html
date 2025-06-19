@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Guy 2021</title>
 
+  
+
+
+  
+
   <!-- 
     - favicon
   -->
@@ -59,7 +64,17 @@
           </select>
         </div>
 
-        <button class="btn btn-primary">Sign in</button>
+        <button id="authBtn">Sign In / Register</button>
+
+<div id="authModal" style="display:none;">
+  <input id="email" type="email" placeholder="Email" required />
+  <input id="password" type="password" placeholder="Password" required />
+  <button id="submitAuth">Submit</button>
+  <button id="toggleAuth">Switch to Register</button>
+  <p id="authError" style="color:red;"></p>
+</div>
+
+
 
       </div>
 
@@ -556,13 +571,31 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js"></script>
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyBZiINJ7WDwa_AkYes3O7oK_WC3vrySUs0",
+  authDomain: "filmlane-2984c.firebaseapp.com",
+  projectId: "filmlane-2984c",
+  storageBucket: "filmlane-2984c.firebasestorage.app",
+  messagingSenderId: "1086912785724",
+  appId: "1:1086912785724:web:470daee8240e1705528239",
+  measurementId: "G-GD1XFQQ6Z8"
+};
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
+  <script src="./assets/js/auth.js"></script>
 
   <!-- 
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  
 </body>
 
 </html>
