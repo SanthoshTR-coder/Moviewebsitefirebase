@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
   
   ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/filmlane)
@@ -54,3 +55,6 @@ If you want to contact with me you can reach me at [Twitter](https://www.twitter
 ### License
 
 This project is **free to use** and does not contains any license.
+=======
+# Moviewebsitefirebase
+>>>>>>> 4d84b4003eb282bd18ef0ab846af310deeaf6e5a
